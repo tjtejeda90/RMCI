@@ -1,0 +1,159 @@
+@include border-box-sizing;
+
+.WOOF_Widget {
+    border: 1px solid $color__rmci-gray;
+    font-family: $font__sans;
+
+    .widget-woof {
+
+        .widget-title {
+            background-color: $color__rmci-red;
+            color: #fff;
+            margin: 0;
+            padding: 0.5em 0;
+            text-align: center;
+            font-size: 1em;
+
+            &:hover {
+                cursor: pointer;
+            }
+
+            @media screen and (min-width: $query__mobile) {
+                background-color: #fff;
+                color: #000;
+                text-align: left;
+                font-size: 1.5em;
+                padding-left: 1em;
+                padding-right: 1em;
+
+                &:hover {
+                    cursor: default;
+                }
+            }
+        }
+
+        .woof_sid_widget {
+            display: none;
+            margin-top: 1em;
+            padding: 1em;
+
+            @media screen and (min-width: $query__mobile) {
+                display: block;
+                margin-top: 0;
+            }
+
+            &.toggled {
+                display: block;
+            }
+
+            .woof_container_inner {
+                border-top: 1px solid $color__rmci-gray;
+
+                h4 {
+                    margin: 0;
+                    padding: 0.5em 1em;
+
+                    a {
+                        text-decoration: none;
+                        color: $color__rmci-red;
+                        font-size: 1.5em;
+                    }
+                }
+
+                .woof_list {
+                    padding: 0 1em;
+                }
+
+                .icheckbox_square-red {
+                    border: 1px solid $color__rmci-red;
+                    width: 1em;
+                    height: 1em;
+
+                    &.checked {
+                        background-position: -52px -4px;
+                    }
+
+                }
+
+                .woof_checkbox_label {
+                    font-size: 0.9em;
+                }
+
+                .woof_image_term {
+                    width: 250px;
+                    height: 50px;
+                    margin-bottom: 10px;
+                    border: 2px solid #e2e6e7;
+                    cursor: pointer;
+                    -webkit-transition: border-color .35s ease;
+                    transition: border-color .35s ease;
+                }
+            }
+
+            .woof_submit_search_form_container {
+                @include container;
+                margin: 0;
+                padding: 0.5em 0;
+                border-top: 1px solid $color__rmci-gray;
+
+                .button {
+                    border: none;
+                    padding: 1em 0;
+                    font-family: inherit;
+                    font-size: 1em;
+                    font-weight: 700;
+
+                    @media screen and (min-width: $query__mobile) {
+                        font-size: 0.75em;
+                    }
+
+                    &.woof_submit_search_form {
+                        @include span(6);
+                        color: #fff;
+                        background-color: $color__rmci-red;
+                    }
+
+                    &.woof_reset_search_form {
+                        @include span(6 last);
+                        color: #fff;
+                        background-color: darken( $color__rmci-gray, 35%);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.woof_products_top_panel {
+    margin-top: 0.5em;
+    margin-bottom: 0;
+
+    ul {
+
+
+        li{
+
+            a {
+                border: 1px solid $color__rmci-red;
+                border-radius: 1em;
+                padding-left: 0.5em;
+                color: #000;
+
+                &:visited {
+                    color: #000;
+                }
+
+                span {
+                    background: none;
+
+                    &:after {
+                        font-family: $font__fontawesome;
+                        content: '\f00d';
+                        color: $color__rmci-red;;
+                        margin-left: 0.5em;
+                    }
+                }
+            }
+        }
+    }
+}

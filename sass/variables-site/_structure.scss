@@ -1,0 +1,12 @@
+$susy: (
+    columns: 12,
+    container: 1024px,
+    global-box-sizing: border-box
+);
+
+$size__content-max-width: 1024px;
+$size__site-main: 100%;
+$size__site-sidebar: 25%;
+
+$query__mobile: 767px;
+$query__iphone-landscape: 567px;

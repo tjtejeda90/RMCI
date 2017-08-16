@@ -1,0 +1,28 @@
+@include border-box-sizing;
+
+.site-footer {
+    color: #fff;
+    background-color: #000;
+
+    .site-info {
+        @include container;
+        text-align: right;
+    }
+
+    a {
+        text-decoration: none;
+
+        &:visited {
+            color: $color__link;
+        }
+
+        &:hover {
+            text-decoration: underline;
+            color: $color__link;
+        }
+
+
+    }
+}
+
+@import 'widgets';

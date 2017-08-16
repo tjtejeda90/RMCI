@@ -1,0 +1,21 @@
+.site-header {
+    position: relative;
+    color: #000;
+    background-color: $color__rmci-gray;
+    width: 100%;
+
+    .header-column {
+        max-width: $size__content-max-width;
+        margin: 0 auto;
+    }
+}
+
+/*--------------------------------------------------------------
+## Site Branding
+--------------------------------------------------------------*/
+@import "site-branding";
+
+/*--------------------------------------------------------------
+## Product Search
+--------------------------------------------------------------*/
+@import "product-search";

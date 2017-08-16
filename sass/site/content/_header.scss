@@ -1,0 +1,34 @@
+.content-header {
+
+    .woocommerce-breadcrumb {
+        padding-bottom: 1em;
+        margin-bottom: 1em;
+        font-family: $font__sans;
+        font-size: 0.75em;
+        font-weight: 700;
+        border-bottom: 1px solid $color__rmci-gray;
+
+        @media screen and (min-width: $query__mobile) {
+            font-size: 1em;
+        }
+
+        a {
+            color: #000;
+            text-decoration: none;
+
+            &:visited {
+                color: #000;
+            }
+
+            &:after {
+                margin: 0 0.5em;
+                font-family: $font__fontawesome;
+                content: '\f101';
+            }
+        }
+    }
+}
+
+.woof_search_is_going nav.woocommerce-breadcrumb {
+        display: block;
+}

@@ -1,0 +1,158 @@
+@include border-box-sizing;
+
+.product-summary-container {
+    @include container;
+    margin-top: 0.5em;
+    margin-bottom: 1em;
+    border-bottom: 1px solid $color__rmci-gray;
+
+    #wooswipe {
+
+        @media screen and ( min-width: $query__mobile ) {
+            @include span(6);
+        }
+    }
+
+    .summary {
+        margin: 0;
+
+        .product_title {
+            margin: 0.25em 0;
+            line-height: 1;
+        }
+
+        .price {
+            margin: 0;
+            font-size: 1.5em;
+            font-weight: 700;
+            color: $color__rmci-red;
+        }
+
+        .product_meta {
+            margin: 1em 0;
+            padding: 1em 0;
+            border-top: 1px solid $color__rmci-gray;
+            border-bottom: 1px solid $color__rmci-gray;
+
+            .sku_wrapper {
+                @include container;
+
+                .sku_label {
+                    @include span(4);
+                }
+
+                .sku {
+                    @include span(8 last);
+                }
+            }
+
+            .categories_wrapper {
+                @include container;
+
+                .categories_label {
+                    @include span(4);
+                }
+
+                .categories_list {
+                    @include span(8 last);
+                }
+            }
+            .tags_wrapper {
+                @include container;
+
+                .tags_label {
+                    @include span(4);
+                }
+
+                .tags_list {
+                    @include span(8 last);
+                }
+            }
+
+        }
+
+
+        @media screen and ( min-width: $query__mobile ) {
+            @include span(6 last);
+            padding: 0 1em;
+        }
+    }
+
+    @media screen and ( min-width: $query__mobile ) {
+        padding: 0 0 1em 1em;
+    }
+}
+
+.wc-tabs-wrapper {
+    margin-bottom: 1em;
+    padding-bottom: 1em;
+    border-bottom: 1px solid $color__rmci-gray;
+
+    ul {
+        position: relative;
+
+        ul, ol {
+            padding-left: 1em;
+        }
+
+
+        li {
+            position: relative;
+
+
+            a {
+                display: block;
+                width: 100%;
+                padding: 1em;
+                text-decoration: none;
+                color: #000;
+                font-weight: 700;
+                border: 1px solid $color__rmci-gray;
+
+                &:after {
+                    position: absolute;
+                    top: 1em;
+                    right: 1em;
+                    font-family: $font__fontawesome;
+                    font-size: 1.25em;
+                    line-height: 1;
+                    content: '\f078';
+                    color: #000;
+                }
+
+                &:visited {
+                    color: #000;
+                }
+            }
+
+            .panel {
+                display: none;
+                margin: 0;
+                padding: 0 0.5em;
+            }
+
+            // No border inside the tab body content.
+            li {
+                border: none;
+            }
+
+            &.active {
+
+                a {
+
+                    &:after {
+                        content: '\f077';
+                    }
+                }
+
+                .panel {
+                    display: block;
+                }
+            }
+
+            &:not(:nth-child(1)) {
+                margin-top: 0.5em;
+            }
+        }
+    }
+}

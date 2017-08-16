@@ -1,0 +1,78 @@
+@include border-box-sizing;
+
+.footer-widgets {
+    color: #fff;
+    background-color: $color__rmci-red;
+
+    .footer-widget-container {
+        @include container;
+        padding: 1em 0;
+
+        .widget {
+            text-align: center;
+            padding-bottom: 2em;
+
+            .widget-title {
+                margin-bottom: 0.25em;
+            }
+
+            a {
+                color: #fff;
+                text-decoration: none;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+
+            @media screen and (min-width: $query__mobile) {
+                @include span(4);
+
+                &:last-child {
+                    @include span(4 last);
+                }
+            }
+        }
+
+        .widget_product_search {
+            margin: 0;
+
+            form {
+                margin: 0 0.5em 0.5em;
+                position: relative;
+
+                input[type="search"] {
+                    width: 100%;
+                    padding: 0.5em;
+                }
+
+                input[type="submit"],
+                .search_icon {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    color: #000;
+                    background-color: transparent;
+                    height: 100%;
+                    border: none;
+                }
+
+                input[type="submit"] {
+                    z-index: 9;
+                }
+
+                .search_icon {
+                    z-index: 8;
+                    font-size: 1.25em;
+                    padding: 0.25em;
+
+                    &:before {
+                        font-family: $font__fontawesome;
+                        content: '\f002';
+                        padding: 0 0.5em;
+                    }
+                }
+            }
+        }
+    }
+}
